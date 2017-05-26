@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170524 19:38:43.948" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\Users\c9915710\Desktop\Robot\exercise1.robot" id="s1" name="Exercise1">
+<test id="s1-t1" name="Average Number Test">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>${7}</arg>
+<arg>${-23}</arg>
+<arg>${-5}</arg>
+<arg>${3}</arg>
+<arg>${4}</arg>
+</arguments>
+<assign>
+<var>@{list of numbers}</var>
+</assign>
+<msg timestamp="20170524 19:38:44.174" level="INFO">@{list of numbers} = [ 7 | -23 | -5 | 3 | 4 ]</msg>
+<status status="PASS" endtime="20170524 19:38:44.174" starttime="20170524 19:38:44.172"></status>
+</kw>
+<kw name="Return Average Value">
+<doc>Retruns an average value from a list of numbers.</doc>
+<arguments>
+<arg>@{list of numbers}</arg>
+</arguments>
+<assign>
+<var>${average value}</var>
+</assign>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${0}</arg>
+</arguments>
+<assign>
+<var>${sum}</var>
+</assign>
+<msg timestamp="20170524 19:38:44.177" level="INFO">${sum} = 0</msg>
+<status status="PASS" endtime="20170524 19:38:44.177" starttime="20170524 19:38:44.176"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${list of values}</arg>
+</arguments>
+<assign>
+<var>${amount of values}</var>
+</assign>
+<msg timestamp="20170524 19:38:44.178" level="INFO">Length is 5</msg>
+<msg timestamp="20170524 19:38:44.179" level="INFO">${amount of values} = 5</msg>
+<status status="PASS" endtime="20170524 19:38:44.179" starttime="20170524 19:38:44.178"></status>
+</kw>
+<kw type="for" name="${value} IN [ @{list of values} ]">
+<kw type="foritem" name="${value} = 7">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${${sum}+${value}}</arg>
+</arguments>
+<assign>
+<var>${sum}</var>
+</assign>
+<msg timestamp="20170524 19:38:44.182" level="INFO">${sum} = 7</msg>
+<status status="PASS" endtime="20170524 19:38:44.182" starttime="20170524 19:38:44.180"></status>
+</kw>
+<status status="PASS" endtime="20170524 19:38:44.182" starttime="20170524 19:38:44.180"></status>
+</kw>
+<kw type="foritem" name="${value} = -23">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${${sum}+${value}}</arg>
+</arguments>
+<assign>
+<var>${sum}</var>
+</assign>
+<msg timestamp="20170524 19:38:44.184" level="INFO">${sum} = -16</msg>
+<status status="PASS" endtime="20170524 19:38:44.184" starttime="20170524 19:38:44.183"></status>
+</kw>
+<status status="PASS" endtime="20170524 19:38:44.184" starttime="20170524 19:38:44.182"></status>
+</kw>
+<kw type="foritem" name="${value} = -5">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${${sum}+${value}}</arg>
+</arguments>
+<assign>
+<var>${sum}</var>
+</assign>
+<msg timestamp="20170524 19:38:44.186" level="INFO">${sum} = -21</msg>
+<status status="PASS" endtime="20170524 19:38:44.186" starttime="20170524 19:38:44.185"></status>
+</kw>
+<status status="PASS" endtime="20170524 19:38:44.187" starttime="20170524 19:38:44.185"></status>
+</kw>
+<kw type="foritem" name="${value} = 3">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${${sum}+${value}}</arg>
+</arguments>
+<assign>
+<var>${sum}</var>
+</assign>
+<msg timestamp="20170524 19:38:44.188" level="INFO">${sum} = -18</msg>
+<status status="PASS" endtime="20170524 19:38:44.189" starttime="20170524 19:38:44.187"></status>
+</kw>
+<status status="PASS" endtime="20170524 19:38:44.189" starttime="20170524 19:38:44.187"></status>
+</kw>
+<kw type="foritem" name="${value} = 4">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${${sum}+${value}}</arg>
+</arguments>
+<assign>
+<var>${sum}</var>
+</assign>
+<msg timestamp="20170524 19:38:44.191" level="INFO">${sum} = -14</msg>
+<status status="PASS" endtime="20170524 19:38:44.191" starttime="20170524 19:38:44.189"></status>
+</kw>
+<status status="PASS" endtime="20170524 19:38:44.191" starttime="20170524 19:38:44.189"></status>
+</kw>
+<status status="PASS" endtime="20170524 19:38:44.191" starttime="20170524 19:38:44.179"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>float(${sum})/${amount of values}</arg>
+</arguments>
+<assign>
+<var>${avgerage value}</var>
+</assign>
+<msg timestamp="20170524 19:38:44.193" level="INFO">${avgerage value} = -2.8</msg>
+<status status="PASS" endtime="20170524 19:38:44.193" starttime="20170524 19:38:44.192"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${avgerage value}</arg>
+</arguments>
+<msg timestamp="20170524 19:38:44.194" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" endtime="20170524 19:38:44.194" starttime="20170524 19:38:44.193"></status>
+</kw>
+<msg timestamp="20170524 19:38:44.195" level="INFO">${average value} = -2.8</msg>
+<status status="PASS" endtime="20170524 19:38:44.195" starttime="20170524 19:38:44.175"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${-2.8}</arg>
+<arg>${average value}</arg>
+</arguments>
+<status status="PASS" endtime="20170524 19:38:44.197" starttime="20170524 19:38:44.196"></status>
+</kw>
+<status status="PASS" endtime="20170524 19:38:44.199" critical="yes" starttime="20170524 19:38:44.170"></status>
+</test>
+<test id="s1-t2" name="Maximum And Minimum Value">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${1}</arg>
+</arguments>
+<assign>
+<var>${first number}</var>
+</assign>
+<msg timestamp="20170524 19:38:44.204" level="INFO">${first number} = 1</msg>
+<status status="PASS" endtime="20170524 19:38:44.204" starttime="20170524 19:38:44.203"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${11}</arg>
+</arguments>
+<assign>
+<var>${second number}</var>
+</assign>
+<msg timestamp="20170524 19:38:44.206" level="INFO">${second number} = 11</msg>
+<status status="PASS" endtime="20170524 19:38:44.206" starttime="20170524 19:38:44.205"></status>
+</kw>
+<kw name="Return Maximum And Minimum Value">
+<doc>Return the minimum number and the maximum value from two scalar variables.</doc>
+<arguments>
+<arg>${first number}</arg>
+<arg>${second number}</arg>
+</arguments>
+<assign>
+<var>${minimum value}</var>
+<var>${maximum value}</var>
+</assign>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${first value}==${second value}</arg>
+<arg>Fail</arg>
+<arg>Values are equal.</arg>
+</arguments>
+<status status="PASS" endtime="20170524 19:38:44.209" starttime="20170524 19:38:44.208"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>${first value}&gt;${second value}</arg>
+<arg>${first value}</arg>
+<arg>${second value}</arg>
+</arguments>
+<assign>
+<var>${maximum value}</var>
+</assign>
+<msg timestamp="20170524 19:38:44.211" level="INFO">${maximum value} = 11</msg>
+<status status="PASS" endtime="20170524 19:38:44.211" starttime="20170524 19:38:44.210"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>${first value}&lt;${second value}</arg>
+<arg>${first value}</arg>
+<arg>${second value}</arg>
+</arguments>
+<assign>
+<var>${minimum value}</var>
+</assign>
+<msg timestamp="20170524 19:38:44.213" level="INFO">${minimum value} = 1</msg>
+<status status="PASS" endtime="20170524 19:38:44.213" starttime="20170524 19:38:44.211"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${minimum value}</arg>
+<arg>${maximum value}</arg>
+</arguments>
+<msg timestamp="20170524 19:38:44.214" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" endtime="20170524 19:38:44.214" starttime="20170524 19:38:44.214"></status>
+</kw>
+<msg timestamp="20170524 19:38:44.215" level="INFO">${minimum value} = 1</msg>
+<msg timestamp="20170524 19:38:44.215" level="INFO">${maximum value} = 11</msg>
+<status status="PASS" endtime="20170524 19:38:44.216" starttime="20170524 19:38:44.207"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${first number}</arg>
+<arg>${minimum value}</arg>
+</arguments>
+<status status="PASS" endtime="20170524 19:38:44.217" starttime="20170524 19:38:44.216"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${second number}</arg>
+<arg>${maximum value}</arg>
+</arguments>
+<status status="PASS" endtime="20170524 19:38:44.219" starttime="20170524 19:38:44.218"></status>
+</kw>
+<status status="PASS" endtime="20170524 19:38:44.220" critical="yes" starttime="20170524 19:38:44.202"></status>
+</test>
+<status status="PASS" endtime="20170524 19:38:44.223" starttime="20170524 19:38:43.978"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Exercise1" pass="2">Exercise1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
